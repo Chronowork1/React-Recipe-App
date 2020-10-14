@@ -63,22 +63,14 @@ const App = () => {
     <div className="App">
       {/*Form element with a input with the type text and button with a type of submit*/}
       <form onSubmit = {getSearch} className="search-form">
-        {/*The value attribute is set to an empty string */}
-        {/*Add onChange, so whenever we add a number or value to the input, its going to run*/}
         <input className="search-bar" type="text" value={search} onChange = {updateSearch}/>
-        {/* onClick attribute when clicked it declared a function that add one to setcounter*/}
         <button className="search-button" type="submit">
           Search
         </button>
       </form>
-      {/* Curly Braces for map because recipes is an array*/}
-      {/* recipe parameter function on map*/}
-      {/*parathesis for html element for rendering Recipe.js*/}
       <div className = "recipes">
       {recipes.map(recipe => (
         <Recipe 
-        //Need a unique identifier for each Recipe const.
-        //The key is to label each title, calorie and image.
         key = {recipe.recipe.label}
         title={recipe.recipe.label} 
         calorie={recipe.recipe.calorie} 
