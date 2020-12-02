@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react'; 
 import Recipe from './Recipe';
 import './App.css';
+require('dotenv').config();
+
+console.log(process.env)
+
 //import { tsConstructorType } from '@babel/types';
 //Use const to place App variable permanently
 //App equals a function that doesn't have a parameter
