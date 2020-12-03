@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'; 
 import Recipe from './Recipe';
 import './App.css';
-require('dotenv').config();
+//require('dotenv').config()
 
-console.log(process.env)
+console.log(process.env.REACT_APP_API_KEY)
 
 //import { tsConstructorType } from '@babel/types';
 //Use const to place App variable permanently
@@ -11,7 +11,7 @@ console.log(process.env)
 const App = () => {
   //Decalered the Api ID and key
   const APP_ID = "c03795ac";
-  const APP_Key = "2d02c6adc893ec08a564945208029c08"
+  const APP_Key = process.env.REACT_APP_API_KEY
   
   //Create a const with an empty array recipes and setRecipes
   const [recipes, setRecipes] = useState([]);
